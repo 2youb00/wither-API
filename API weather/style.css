@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #222;
+}
+.card{
+    width: 90%;
+    max-width: 490px;
+    background: linear-gradient(135deg ,#00feba , #5b548a);
+    margin: 100px auto 0;
+    color: #fff;
+    border-radius: 20px;padding: 40px 35px;
+    text-align: center;
+}
+.card .search{
+    width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.search input{
+    border: none;
+    outline: none;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    border-radius: 20px;
+    flex: 1;
+    margin-right: 18px;
+    transition: all 0.5s;
+ 
+}
+.seach-icon,.location-icon{
+    background-color: white;
+    font-size: 21px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 39px;
+    height: 39px;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ;
+    margin-left: 0.5rem;
+}
+.seach-icon:active,  .search input:focus ,.location-icon:active{
+    background-color:#dbdbdb ;
+}
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+.weather .temp{
+    font-size: 80px;
+    font-weight: 500;
+}
+.weather .city{
+    font-size: 45px;
+    font-weight: 400;
+   
+}
+.details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+.details .humidity-div , .details .wind-div {
+display: flex;
+text-align: start;
+}
+.details .humidity-div i,.wind-div i{
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+.humidity-details .humidity,.wind-details .wind{
+   font-size: 25px;
+}
+.humidity-details p:nth-of-type(2),.wind-details p:nth-of-type(2){
+    font-size: small;
+}
+.weather{
+    display: none;
+}
+@media (max-width:480px){
+    .search input{
+        margin-right: 0px;
+    }
+    .seach-icon,.location-icon{
+        font-size: 18px;
+        width: 35px;
+        height: 35px;
+        margin-left: 0rem;
+    }
+    .seach-icon{
+        margin: 0 0.5rem;
+    }
+    .weather .temp{
+        font-size: 70px;
+    }
+    .weather .city{
+        font-size: 35px;
+    }
+    .details .humidity-div i,.wind-div i{
+        font-size: 1.7rem;
+    }
+    .humidity-details .humidity,.wind-details .wind{
+       font-size: 20px;
+    }
+    .humidity-details p:nth-of-type(2),.wind-details p:nth-of-type(2){
+        font-size: 15px;
+        color: #dbdbdb;
+    }
+}
+@media (max-width:400px){
+    .search input{
+        width: 180px;
+        flex: 0;
+    }
+}
